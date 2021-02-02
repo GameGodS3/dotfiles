@@ -121,3 +121,30 @@ export PATH="$PATH:/usr/local/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+newwebproj(){
+    echo -n "Enter name of project: ";
+    read;
+    mkdir ~/projects/${REPLY};
+    cd ~/projects/${REPLY};
+    touch .gitignore;
+    echo '.*' >> .gitignore;
+    echo '!/.gitignore' >> .gitignore;
+    touch index.html;
+    mkdir js;
+    touch js/main.js;
+    mkdir scss;
+    touch scss/main.scss;
+    touch scss/_fonts.scss;
+    touch scss/_animation.scss;
+    touch scss/_colors.scss;
+    mkdir css;
+    mkdir common;
+    touch common/navbar.html;
+    mkdir fonts;
+    mkdir media;
+    git init;
+    git branch -M main;
+    echo "Opening Project folder in VSCode..."
+    code .; 
+}
