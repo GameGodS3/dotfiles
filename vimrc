@@ -19,5 +19,13 @@ call plug#begin()
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdtree'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 
 call plug#end()
+
+augroup autoformat_settings
+    autocmd FileType python AutoFormatBuffer autopep8
+augroup END
