@@ -15,8 +15,12 @@ export ZSH="/home/sudev/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-POWERLEVEL9K_MODE="nerdfont-complete"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="agnoster"
+#ZSH_THEME="dpoggi"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="fletcherm"
+#POWERLEVEL9K_MODE="nerdfont-complete"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -124,6 +128,7 @@ bindkey '^ ' autosuggest-accept
 
 #Environment Variables
 export SUDO_PROMPT='Vibe Check:'
+export PROMPT_EOL_MARK=''
 export PATH="$PATH:/snap/bin"
 export PATH="$PATH:/usr/local/bin"
 
@@ -166,3 +171,5 @@ qr(){
     xdg-open localhost.png; 
     clear;
 }
+
+PROMPT="$fg[yellow]%}$USER ${PROMPT}"
