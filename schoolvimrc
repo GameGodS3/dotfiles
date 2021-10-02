@@ -1,0 +1,39 @@
+" Vimrc config
+" Sudev SS
+
+syntax enable
+
+" I prefer ZZ over escape for quitting from INSERT mode 
+inoremap ZZ <Esc>
+set wrap
+
+" For moving lines up and down in V mode
+vnoremap J :m '>+1<cr>gv=gv
+vnoremap K :m '<-2<cr>gv=gv
+
+" Color Scheme and line numbering
+" For downloading monokai colorscheme
+" wget https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim -P ~/.vim/colors/
+colorscheme monokai 
+set number
+
+" For setting 4 spaces when using <TAB>
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Smart indentation
+set autoindent
+set smartindent
+
+" Sets up inbuilt autocompletion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+" Pmenu colors
+hi Pmenu ctermbg=59
+hi PmenuSel ctermbg=24
+"hi Pmenu ctermfg=06
+
+set backspace=indent,eol,start
+" Use Ctrl-N for suggestion
