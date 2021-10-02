@@ -37,3 +37,12 @@ hi PmenuSel ctermbg=24
 
 set backspace=indent,eol,start
 " Use Ctrl-N for suggestion
+
+" Auto Bracket closing (no plugins)
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
