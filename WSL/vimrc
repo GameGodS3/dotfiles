@@ -1,0 +1,34 @@
+syntax enable
+
+" I prefer ZZ over escape for quitting from INSERT mode 
+inoremap ZZ <Esc>
+set wrap
+
+" Color Scheme and line numbering
+" colorscheme pablo
+colorscheme monokai 
+set number
+
+" For setting 4 spaces when using <TAB>
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+set encoding=UTF-8
+
+" Vim Plug stuff
+
+call plug#begin()
+
+Plug 'neoclide/coc.nvim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdtree'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+Plug 'turbio/bracey.vim'
+Plug 'alvan/vim-closetag'
+Plug 'ryanoasis/vim-devicons'
+
+call plug#end()
+
