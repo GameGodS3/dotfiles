@@ -80,7 +80,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git fzf autojump zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,7 +116,7 @@ alias zedit="vim ~/.zshrc"
 alias pyserv="python3 -m http.server 6969"
 
 # Manjaro aliases
-alias hurray='yay -Slq | fzf -m --preview '\''cat <(yay -Si {1}) <(yay -Fl {1} | awk "{print \}")'\'' | xargs -ro yay -S'
+alias hurray='yay -Slq | fzf -m --preview '\''cat <(yay -Si {1}) <(yay -Fl {1} | awk "{print}")'\'' | xargs -ro yay -S'
 alias pacshop='pacman -Slq | fzf -m --preview '\''cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \}")'\'' | xargs -ro sudo pacman -S'
 alias pac="sudo pacman -S"
 alias unpac="sudo pacman -Rns"
@@ -131,6 +131,7 @@ export SUDO_PROMPT='Vibe Check:'
 export PROMPT_EOL_MARK=''
 export PATH="$PATH:/snap/bin"
 export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/home/sudev/.local/share/gem/ruby/3.0.0/bin"
 
 # NVM stuff
 export NVM_DIR="$HOME/.nvm"
@@ -172,4 +173,11 @@ qr(){
     clear;
 }
 
-PROMPT="$fg[yellow]%}$USER ${PROMPT}"
+scrclp(){
+   maim --format png /dev/stdout | xclip -selection clipboard -t image/png -i 
+}
+
+#PROMPT="$fg[yellow]%}$USER ${PROMPT}"
+
+# Import pywal colors
+cat ~/.cache/wal/sequences
