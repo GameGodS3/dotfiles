@@ -8,9 +8,6 @@ set wrap
 vnoremap J :m '>+1<cr>gv=gv
 vnoremap K :m '<-2<cr>gv=gv
 
-" Color Scheme and line numbering
-colorscheme monokai 
-" colorscheme codedark 
 " Sets entire background according to vim colorscheme
 set t_ut=""
 set number
@@ -37,10 +34,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
-Plug 'dbeniamine/cheat.sh-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'connorholyday/vim-snazzy'
+Plug 'sickill/vim-monokai'
 
 call plug#end()
 
@@ -51,5 +50,9 @@ hi PmenuSel ctermbg=24
 set backspace=indent,eol,start
 
 " Annoying bell
-set visualbell
+set novisualbell
 set t_vb=
+
+" Color Scheme and line numbering
+"colorscheme codedark 
+colorscheme snazzy 
